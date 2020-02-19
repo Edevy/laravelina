@@ -81,10 +81,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Manahoana ianareo
+                    User: @php print_r($anarana) @endphp
                 </div>
                 <p>
-                    <a href="{{ url('/user') }}">User</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </p>
             </div>
         </div>

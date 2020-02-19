@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/user', function () {
+//     return view('user');
+// });
+
+Route::get('/user/{nom?}', function ($nom = "[ no data passed to represent as user ;) ]") {
+    return view('user', [ "anarana" => $nom]);
+});
