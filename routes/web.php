@@ -14,7 +14,6 @@
 /**
  * Affiche la vue bienvenue
  */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,12 +21,16 @@ Route::get('/', function () {
 /**
  * Affiche la vue de l'utilisateur avec paramètre passé dans l´ URL
  */
-
 Route::get('/user/{nom?}', function ($nom = "[ no data passed to represent as user ;) ]") {
     return view('user', [ "anarana" => $nom]);
 });
 
 /**
- * Une autre type de routing par un controller
+ * 1. Une autre type de routing par un controller
  */
-Route::get('/edevy', 'Edevy@index');
+// Route::get('/edevy', 'Edevy@index');
+
+/**
+ * 2. Afaka asiana parameter ihany koa izay nalaina tany @ URL
+ */
+Route::get('/edevy/{param}', 'Edevy@index');
