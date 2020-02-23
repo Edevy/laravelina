@@ -11,19 +11,13 @@
 |
 */
 
-// Affiche la vue bienvenue
+/**
+ * Affiche la vue bienvenue
+ */
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-/**
- * Affiche la vue de l'utilisateur sans paramètre passé dans l´ URL
- */
-
-// Route::get('/user', function () {
-//     return view('user');
-// });
 
 /**
  * Affiche la vue de l'utilisateur avec paramètre passé dans l´ URL
@@ -32,3 +26,8 @@ Route::get('/', function () {
 Route::get('/user/{nom?}', function ($nom = "[ no data passed to represent as user ;) ]") {
     return view('user', [ "anarana" => $nom]);
 });
+
+/**
+ * Une autre type de routing par un controller
+ */
+Route::get('/edevy', 'Edevy@index');
