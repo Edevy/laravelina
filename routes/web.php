@@ -33,4 +33,4 @@ Route::get('/user/{nom?}', function ($nom = "[ no data passed to represent as us
 /**
  * 2. Afaka asiana parameter ihany koa izay nalaina tany @ URL
  */
-Route::get('/edevy/{param}', 'Edevy@index');
+Route::get('/edevy/{param?}', 'Edevy@index');

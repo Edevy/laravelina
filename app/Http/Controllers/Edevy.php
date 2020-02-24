@@ -27,12 +27,26 @@ class Edevy extends Controller
      * 
      * @var = array
      */
-    function index($param){
-        return [
-            "parameter" => $param,
-            "id" => 44,
-            "name" => "Kotoarisoa",
-            "email" => "arisoa@edevy.mg"
-        ];
+    // function index($param){
+    //     return [
+    //         "parameter" => $param,
+    //         "id" => 44,
+    //         "name" => "Kotoarisoa",
+    //         "email" => "arisoa@edevy.mg"
+    //     ];
+    // }
+
+    /**
+     * Mandefa retour any amina view
+     * 
+     * @view
+     */
+    function index(){
+        return view(
+            'user',
+            [
+                "name" => "Peter"
+            ]
+        );
     }
 }

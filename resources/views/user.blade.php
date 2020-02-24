@@ -81,7 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    User: @php print_r($anarana) @endphp
+                    User: @php 
+                           if (isset ($anarana)){
+                             print_r($anarana);   
+                           }else{
+                            @endphp
+                            <h3>{{ $name }}</h3>
+                            passed from controller
+                            @php
+                           }
+                           
+                          @endphp
                 </div>
                 <p>
                     <a href="{{ url('/') }}">Home</a>
