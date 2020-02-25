@@ -49,4 +49,21 @@ class Edevy extends Controller
             ]
         );
     }
+
+    /**
+     * Submission des données et les afficher ensuite
+     */
+    function formSubmit(Request $req){
+        //dd($req->email);
+        print_r($req->input("email"));
+    }
+
+
+    /**
+     * 
+     * Afficher la page de formulaire via le controlleur
+     */
+    function showForm(){
+        return view("form");
+    }
 }

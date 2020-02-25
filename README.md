@@ -12,3 +12,5 @@
     - make a controller via command line
     - afficher les data dans l'URL , asiana array kely ihany koa dia avoaka json avy eo
     
+### 1.2 Submit form
+    -  cross-site request forgery (CSRF), @csrf ilay user dia avy @ sitentsika fa tsy avy any @ externe

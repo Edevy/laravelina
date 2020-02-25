@@ -34,3 +34,18 @@ Route::get('/user/{nom?}', function ($nom = "[ no data passed to represent as us
  * 2. Afaka asiana parameter ihany koa izay nalaina tany @ URL
  */
 Route::get('/edevy/{param?}', 'Edevy@index');
+
+/**
+ * Mampiasa view rehefa mampiseho ilay formulaire
+ */
+//Route::view('/formulaire', 'form');
+
+/**
+ * Mampiasa controllerur rehefa eto isika
+ */
+Route::get('/formulaire', 'Edevy@showForm');
+
+/**
+ * Alefa mankany @ controller
+ */
+Route::post('/formulaire', 'Edevy@formSubmit')->name("barea");
