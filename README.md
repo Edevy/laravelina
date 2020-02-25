@@ -14,3 +14,4 @@
     
 ### 1.2 Submit form
     -  cross-site request forgery (CSRF), @csrf ilay user dia avy @ sitentsika fa tsy avy any @ externe
+    - ajax mbola en cours

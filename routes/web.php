@@ -46,6 +46,9 @@ Route::get('/edevy/{param?}', 'Edevy@index');
 Route::get('/formulaire', 'Edevy@showForm');
 
 /**
- * Alefa mankany @ controller
+ * Alefa mankany @ controller miaraka @ methode post ilay données
  */
-Route::post('/formulaire', 'Edevy@formSubmit')->name("barea");
+Route::post('/formulaire/formulairefoana/lavaloatra', 'Edevy@formSubmit')->name("barea");
+
+Route::get('ajax-form-submit', 'FormController@index');
+Route::post('save-form', 'FormController@store')->name("saveform");
