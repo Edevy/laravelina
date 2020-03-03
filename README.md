@@ -1,4 +1,4 @@
-# laravelina
+# Laravelina
 
 ## 1. Atomboka ?
     - routing maivana 
@@ -13,5 +13,13 @@
     - afficher les data dans l'URL , asiana array kely ihany koa dia avoaka json avy eo
     
 ### 1.2 Submit form
-    -  cross-site request forgery (CSRF), @csrf ilay user dia avy @ sitentsika fa tsy avy any @ externe
-    - ajax mbola en cours
+
+    - cross-site request forgery (CSRF), @csrf ilay user dia avy @ sitentsika fa tsy avy any @ externe
+
+#### 1.2.1. Méthode natif de laravel
+
+    jqready
+    jqsubmit
+    jqajax
+    if response.warning
+    jqeach

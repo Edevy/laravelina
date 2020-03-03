@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class FormController extends Controller
 {
@@ -13,7 +15,41 @@ class FormController extends Controller
  
     public function store(Request $request)
     {  
-        dd("ok");
+        $rules = array(
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'mobile_number' => 'required'
+        );
+
+        $validate = Validator::make($request->all(), $rules);
+
+        if($validate->fails()){
+            return response()->json([
+                'warning'=>$validate->errors()
+            ]);
+        }
+
+        $datas = [
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'mobile_number'=>$request->mobile_number,
+        ];
+
+        try {
+            Contact::create($datas);
+            return response()->json([
+                'success'=>[
+                    'status'=>'success',
+                    'message'=>'Data added with status success'
+                ]
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'error'=>$th->getMessage()
+            ]);
+        }
+
+        // dd("ok");
         // request()->validate([
         // 'name' => 'required',
         // 'email' => 'required|email|unique:users',

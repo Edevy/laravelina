@@ -1,21 +1,12 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use Illuminate\Support\Facades\Route;
 
 /**
  * Affiche la vue bienvenue
  */
 Route::get('/', function () {
-    return view('welcome');
+    return view('application');
 });
 
 /**
@@ -50,5 +41,27 @@ Route::get('/formulaire', 'Edevy@showForm');
  */
 Route::post('/formulaire/formulairefoana/lavaloatra', 'Edevy@formSubmit')->name("barea");
 
+/**
+ * 
+ * ajax routes
+ * 
+ * TODO
+ */
 Route::get('ajax-form-submit', 'FormController@index');
 Route::post('save-form', 'FormController@store')->name("saveform");
+
+
+/**
+ * affiche form
+ */
+// Route::get('form', function(){
+//     return view('from');
+// });
+
+Route::get('/showform', 'BynanController@afficherForm');
+
+/**
+ * traiter les données
+ */
+
+Route::post('/posting', 'BynanController@store')->name("barea");
